@@ -7,5 +7,35 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <string>
+
 
 using namespace std;
+
+class bookshelf
+{
+    private:
+        int yearPublished;
+        int edition;
+        int bookNumInSeries;
+
+        string title;
+        string authorFirstName;
+        string authorLastName;
+        string publisher;
+        
+        bool bDoesBookHaveEdition = false;
+        bool bIsBookPartOfASeries = false;
+    
+    public:
+        string bookCode;
+}
+
+
+bool createBook (int yearPublished, int edition, int bookNumInSeries, 
+    string title, string authorFirstName, string authorLastName,
+     string publisher, bool bDoesBookHaveEdition, 
+     bool bIsBookPartOfASeries); //creates new book objects; returns true if object was created. otherwise returns false
+
+string createBookCode (int yearPublished); //creates call number
+string findClassificationID (); //prompts user for catagory and then more detailed catagory
